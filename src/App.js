@@ -9,7 +9,6 @@ function App() {
   //Arreglo que maneja el estado del contador
   const [numClics, setNumClics] = useState(0);
   const [darkMode, setDarkMode] = useState(true);
-  const oscuro = '#5d1292';
 
   const manejarClic = () => {
     setNumClics(numClics + 1);
