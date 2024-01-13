@@ -1,12 +1,22 @@
+*{
+  --oscuro: #5d1292;
+}
+
 .contador{
-  min-width: 300px;
-  height: 300px;
-  font-size: 160px;
-  padding: 25px;
-  color: white;
+  min-width: 200px;
+  height: 200px;
+  font-size: 100px;
+  color: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 8px solid white;
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
   margin-bottom: 15px;
+  transition: color 1s ease, border-color 1s ease;
+}
+
+.contador.light-mode{
+  color: var(--oscuro) !important;
+  border-color: var(--oscuro) !important;
 }

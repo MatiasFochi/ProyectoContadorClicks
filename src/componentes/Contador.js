@@ -1,8 +1,8 @@
 import '../hojas-de-estilo/Contador.css';
 
-function Contador({ numClics }){
+function Contador({ numClics, modoOscuro}){
   return(
-    <div className="contador">
+    <div className={(modoOscuro)? 'contador' : 'contador light-mode'}>
       {numClics}
     </div>
   );

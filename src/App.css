@@ -1,12 +1,5 @@
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html,
-body{
-  background-color: #1b1b32;
+  --oscuro: #5d1292;
 }
 
 .App{
@@ -14,28 +7,115 @@ body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
   font-family: Lato, sans-serif;
-}
-
-.freecodecamp-logo-contenedor{
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
+  min-height: 100vh;
+  background-color: var(--oscuro);
+  transition: background-color 1s ease;
 }
 
-.freecodecamp-logo{
-  height: 50px;
+.App.light-mode{
+  background-color: whitesmoke !important;
 }
+
+.logo-contenedor{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 20px;
+  position: relative;
+}
+
+.logo-contenedor-2{
+  height: 50px;
+  width: 50px;
+}
+
+.logo{
+  height: 50px;
+  position: absolute;
+}
+
+.Change{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 40px;
+  margin: 10px;
+  z-index: 1;
+}
+
+.boton-change{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 90px;
+  height: 40px;
+  margin: 10px;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  border: 0.1px solid whitesmoke;
+  background-color: var(--oscuro);
+  transition: color 1s ease, background-color 1s ease, border-color 1s ease;
+}
+
+.boton-change.light-mode{
+  color: var(--oscuro) !important;
+  background: whitesmoke !important;
+  border-color: var(--oscuro);
+}
+
 
 .contenedor-principal{
-  height: 750px;
-  min-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  min-height: 300px;
+  min-width: 90%;
+  display: grid;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+}
+
+
+@media only screen and (min-height: 450px) {
+  .contenedor-principal,
+  .contenedor-principal.light-mode{
+    min-height: 300px;
+    min-width: 90%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .contador,
+  .contador.light-mode{
+    min-width: 200px;
+    height: 200px;
+    font-size: 100px;
+  }
+  
+  .logo-contenedor,
+  .logo-contenedor.light-mode{
+    height: 80px;
+    margin: 20px 0 0 0;
+  }
+
+  .logo-contenedor-2,
+  .logo-contenedor-2.light-mode{
+    height: 80px;
+    width: 80px;
+  }
+
+  .logo{
+    height: 80px;
+  }
+
+  button{
+    width: 225px;
+    height: 70px;
+    font-size: 35px;
+  }
 }

@@ -1,24 +1,65 @@
+*{
+  --oscuro: #5d1292;
+}
+
 button{
-  width: 250px;
-  height: 80px;
-  font-size: 35px;
+  width: 150px;
+  height: 60px;
+  font-size: 25px;
   font-family: Roboto, sans-serif;
   font-weight: bold;
-  color: white;
-  border: 2px solid white;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
   border-radius: 15px;
   margin: 5px;
   cursor: pointer;
 }
 
-button:hover{
-  background-color: #00471b;
+.boton-clic,
+.boton-reiniciar{
+  transition: color 1s ease, background-color 1s ease, border-color 1s ease;
 }
 
 .boton-clic{
-  background-color: #002ead;
+  color: #8e36ce;
+  background-color: whitesmoke;
 }
 
+.boton-clic:hover{
+  color: whitesmoke;
+  background-color: #36ce36;
+}
+
+.boton-clic.light-mode{
+  background-color: #8e36ce;
+  color: whitesmoke;
+  border-color: #8e36ce;
+}
+
+.boton-clic.light-mode:hover{
+  color: whitesmoke;
+  background-color: #36ce36;
+  border-color: whitesmoke;
+}
+
+
 .boton-reiniciar{
-  background-color: #5a01a7;
+  background-color: #8e36ce;
+}
+
+.boton-reiniciar:hover{
+  color: whitesmoke;
+  background-color: #fd3a3a;
+}
+
+.boton-reiniciar.light-mode{
+  background-color: whitesmoke;
+  color: #8e36ce;
+  border-color: #8e36ce;
+}
+
+.boton-reiniciar.light-mode:hover{
+  background-color: #fd3a3a;
+  color: whitesmoke;
+  border-color: whitesmoke;
 }
