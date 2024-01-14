@@ -8,7 +8,7 @@ import { useState } from 'react';
 function App() {
   //Arreglo que maneja el estado del contador
   const [numClics, setNumClics] = useState(0);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const manejarClic = () => {
     setNumClics(numClics + 1);
@@ -59,6 +59,10 @@ function App() {
           esBotonDeClic={false}
           manejarClic={reinciarContador}
         />
+      </div>
+      <div className={(darkMode)?"footer":"footer light-mode"}>
+        {"by "}
+        <a href='https://www.linkedin.com/in/matias-fochi/' target='_blank' rel='noreferrer' className={(darkMode)?"texto-footer":"texto-footer light-mode"} >MatiasFochi</a>
       </div>
     </div>
   );
