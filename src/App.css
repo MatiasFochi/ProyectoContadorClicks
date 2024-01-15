@@ -89,6 +89,9 @@
   height: 40px;
   color: white;
   transition: color 1s ease;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .footer .texto-footer{
