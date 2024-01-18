@@ -34,7 +34,7 @@ function App() {
     <div className={(darkMode)?"App":"App light-mode"}>
       <div className='Change'>
         <button className={(darkMode)?"boton-change":"boton-change light-mode"} onClick={cambioModo} >
-          {(darkMode) ? "Modo claro" : "Modo noche"}
+          {(darkMode) ? "Modo noche" : "Modo claro"}
         </button>
       </div>
       <div className='logo-contenedor'>
